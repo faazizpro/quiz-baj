@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './components/Blog/Blog';
 import BodyCard from './components/BodyCard/BodyCard';
+import Card from './components/Card/Card';
 import Hero from './components/Hero/Hero';
 import Main from './components/Main/Main';
 import Statistics from './components/Statistics/Statistics';
@@ -16,7 +17,16 @@ function App() {
         {
           path: '/',
           element: <Hero></Hero>,
-          loader: () => fetch('https://openapi.programming-hero.com/api/quiz')
+          loader: async () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          }
+        },
+        {
+          path: '/card/:cardId',
+          element: <Card></Card>,
+          loader: async ({params}) =>{
+            console.log(params.CardId);
+          }
         },
         {
           path: '/statistics',
@@ -28,6 +38,10 @@ function App() {
         }
         
       ]
+    },
+    {
+      path: '*',
+      element: <div>This Route Does Not Exists</div>
     }
   ])
 
