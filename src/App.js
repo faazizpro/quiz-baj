@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './components/Blog/Blog';
 import Cards from './components/Cards/Cards';
+import Error from './components/Error/Error';
 import Hero from './components/Hero/Hero';
 import Main from './components/Main/Main';
 import Statistics from './components/Statistics/Statistics';
@@ -35,14 +36,15 @@ function App() {
         {
           path: '/blog',
           element: <Blog></Blog>
+        },
+        {
+          path: '/*',
+          element: <Error></Error>
         }
         
       ]
     },
-    {
-      path: '*',
-      element: <div>This Route Does Not Exists</div>
-    }
+
   ])
 
   return (

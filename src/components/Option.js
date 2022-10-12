@@ -7,6 +7,7 @@ const Option = ({ option, correctAnswer }) => {
             toast.success('Correct', {
                 position: "top-right",
             });
+           
         }
         else {
             toast.warn(`Incorrect, Correct is ${correctAnswer}`, {
