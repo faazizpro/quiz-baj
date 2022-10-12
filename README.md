@@ -1,3 +1,13 @@
+My project name is: Quiz Baj.
+What I Did In This Project?
+At fist I've created a navbar and then created a hero section. I've displayed 4 cards in the home page. Then I've set dynamic routes. If I click any menu, it will create route based on the ID. Then I've created quiz and blog section.
+
+Here's My Live Website Link: https://zippy-sundae-d30776.netlify.app/
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
