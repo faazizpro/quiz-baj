@@ -25,7 +25,8 @@ function App() {
           path: '/card/:cardId',
           element: <Card></Card>,
           loader: async ({params}) =>{
-            console.log(params.CardId);
+            // console.log(params.cardId);
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.cardId}`)
           }
         },
         {
