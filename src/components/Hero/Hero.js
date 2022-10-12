@@ -11,9 +11,9 @@ const Hero = () => {
     
     return (
         <div className='mt-10'>
-            <div className='flex items-center justify-center '>
+            <div className='md:flex md:items-center md:justify-center '>
                 <div>
-                    <h1 className='text-7xl font-extrabold text-color '>
+                    <h1 className='md:text-7xl md:font-extrabold text-color '>
                     Play Online <br /> Quiz and Check <br /> Your Brain!
                     </h1>
                 </div>
@@ -23,8 +23,8 @@ const Hero = () => {
             </div>
             {/* Card Data Load */}
             <div className='mt-10 mb-20'>
-                <h2 className='text-center text-7xl font-extrabold mt-14 mb-14 text-color'>Explore Our Quiz Categories</h2>
-            <div className='flex justify-center gap-10 '>
+                <h2 className='md:text-center md:text-7xl md:font-extrabold md:mt-14 md:mb-14 text-color'>Explore Our Quiz Categories</h2>
+            <div className='md:flex md:justify-center md:gap-10 '>
             {
                 cardData.data.map(card => <BodyCard
                     key={card.id}
