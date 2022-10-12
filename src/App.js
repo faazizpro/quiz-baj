@@ -2,8 +2,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './components/Blog/Blog';
-import BodyCard from './components/BodyCard/BodyCard';
-import Card from './components/Card/Card';
+import Cards from './components/Cards/Cards';
 import Hero from './components/Hero/Hero';
 import Main from './components/Main/Main';
 import Statistics from './components/Statistics/Statistics';
@@ -23,7 +22,7 @@ function App() {
         },
         {
           path: '/card/:cardId',
-          element: <Card></Card>,
+          element: <Cards></Cards>,
           loader: async ({params}) =>{
             // console.log(params.cardId);
             return fetch(`https://openapi.programming-hero.com/api/quiz/${params.cardId}`)
